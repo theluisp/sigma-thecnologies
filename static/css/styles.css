@@ -1,0 +1,671 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.bg-orange {
+    background-color: #005f87 !important;
+    /* Naranja */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    /* Color de texto blanco para los enlaces */
+    font-weight: bold;
+    /* Hacer que los enlaces sean más visibles */
+    padding: 10px 15px;
+    /* Espaciado alrededor del texto */
+}
+
+/* Efecto hover en los enlaces de la navbar */
+.navbar-nav .nav-link:hover {
+    background-color: #fb4f05;
+    /* Naranja más oscuro en hover */
+    border-radius: 4px;
+    /* Redondear las esquinas en el hover */
+}
+
+.hero-section h1 {
+    font-size: 6vw;
+    /* Tamaño dinámico */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+    /* Asegura que el texto se centre dentro del h1 */
+    max-width: 90%;
+    /* Limita el ancho del texto */
+    overflow: hidden;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    display: block;
+    /* Hace que el h1 se comporte como un bloque */
+    word-wrap: break-word;
+    /* Evita que el texto se desborde */
+}
+
+.hero-section h5 {
+    font-weight: bold;
+    color: white;
+
+}
+
+/* Solo para los botones con la clase custom-btn */
+.custom-btn {
+    background-color: #005f87;
+    /* Azul profundo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+.custom-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 95, 135, 0.5);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 10vw;
+        /* Ajuste en pantallas más pequeñas */
+    }
+
+    .hero-section div {
+        position: absolute;
+        top: 10%;
+        /* Mueve el contenido más arriba */
+        text-align: center;
+        padding: 0 20px;
+        /* Agrega algo de espacio alrededor */
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        /* Reducimos el tamaño del texto */
+        margin-top: 10px;
+        /* Reducimos el espacio entre título y párrafo */
+    }
+
+    .btn-custom {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .hero-section div {
+        top: 15%;
+    }
+
+    .hero-section h1 {
+        font-size: 10vw;
+        /* Ajuste aún más pequeño del tamaño del título */
+    }
+
+
+    .btn-custom {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Botón personalizado */
+.btn-custom {
+    background-color: #004a64;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Evitar scroll en el body después de la imagen hero */
+body {
+    margin: 0;
+    /* Eliminar márgenes */
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+}
+
+.hero-section+.other-content {
+    height: 0;
+}
+
+.service-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    /* Redondeamos las esquinas de las tarjetas */
+    overflow: hidden;
+    /* Asegura que el contenido no se desborde */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.section-bg {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 60px 0;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+footer {
+    background-color: #004a64;
+    /* Color de fondo oscuro */
+    color: white;
+    /* Texto en blanco */
+    text-align: center;
+    /* Centrar el texto */
+    padding: 20px 0;
+    /* Espaciado alrededor del contenido */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+    position: relative;
+    /* Para manejar el posicionamiento si es necesario */
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem;
+        /* Ajusta el tamaño del texto */
+        padding: 10px 0;
+        /* Reduce el espaciado en pantallas pequeñas */
+    }
+
+}
+
+
+/*página de contacto*/
+
+
+.contacto-section {
+    padding: 60px 0;
+    background: #fff;
+    color: #333;
+}
+
+.contacto-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contacto-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #005f87;
+}
+
+.contacto-description {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contacto-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contacto-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.contacto-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.contacto-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacto-item i {
+    font-size: 1.5rem;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.contacto-item p {
+    font-size: 1rem;
+}
+
+.contacto-item h1,
+h2,
+h3,
+h4,
+h5 {
+    color: white;
+}
+
+.contacto-form {
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #005f87;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #e9ecef;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: none;
+    background: #d4e0e9;
+}
+
+.contacto-form button {
+    background-color: #005f87;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto-form button:hover {
+    background-color: #004a6e;
+}
+
+@media (max-width: 768px) {
+    .contacto-info {
+        flex-direction: column;
+    }
+
+    .contacto-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contacto-container {
+        padding: 15px;
+    }
+}
+
+
+.github {
+    background-color: #333;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.mail {
+    background-color: #007bff;
+}
+
+.contacto-item a:hover {
+    color: #f4f4f4;
+}
+
+/*Services*/
+       /* Reset de márgenes y estilos por defecto */
+      
+
+      /* Sección de Servicios */
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: calc(100vh - 120px);
+    box-sizing: border-box;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2C3E50;
+}
+
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 22%;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: #005f87;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Media Queries - Responsividad */
+@media screen and (max-width: 1024px) {
+    .service-card {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        flex-basis: 100%;
+    }
+
+    .services-title {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card h3 {
+        font-size: 1.5em;
+    }
+
+    .service-card p {
+        font-size: 0.9em;
+    }
+
+    .services-title {
+        font-size: 1.8em;
+    }
+}
+
+/* Sección de Servicios */
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: calc(100vh - 120px);
+    box-sizing: border-box;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2C3E50;
+}
+
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 22%;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: #005f87;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Media Queries - Responsividad */
+@media screen and (max-width: 1024px) {
+    .service-card {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-card {
+        flex-basis: 100%;
+    }
+
+    .services-title {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card h3 {
+        font-size: 1.5em;
+    }
+
+    .service-card p {
+        font-size: 0.9em;
+    }
+
+    .services-title {
+        font-size: 1.8em;
+    }
+}
+
+
+
+/*PROYECTOS PORTAFOLIO*/
+/* Contenedor de las flechas */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+
+/* Flechas del carrusel con fondo minimalista */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente más sutil */
+    color: white; /* Color de las flechas */
+    padding: 8px; /* Menos padding para que sean más compactas */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 32px; /* Ancho fijo para las flechas */
+    height: 32px; /* Alto fijo para las flechas */
+}
+
+/* Para las flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;
+}
+
+.carousel-control-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Esto asegura que la flecha esté centrada verticalmente */
+}
+
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Esto asegura que la flecha esté centrada verticalmente */
+}
+
+/* Efecto hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo más oscuro cuando pasa el ratón */
+    color: white; /* Asegurar que el color de las flechas sea blanco */
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 18px; /* Reducir un poco más el tamaño de las flechas en pantallas pequeñas */
+        padding: 6px; /* Menos padding */
+    }
+    .carousel-item img {
+        object-fit: contain; /* Mantener la imagen proporcional sin recortes */
+        height: auto; /* Ajustar altura según la relación de aspecto de la imagen */
+    }
+}
+
+
+.carousel-item img {
+    object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su relación de aspecto */
+    height: 400px; /* Tamaño predeterminado para escritorio */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+}
+
+
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px; /* Asegura que el texto no esté sobre la imagen y tenga algo de margen */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    z-index: 10;
+   
+}

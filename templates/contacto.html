@@ -1,0 +1,75 @@
+<section class="contacto-section">
+    <div class="contacto-container">
+        <h2 class="contacto-title">¡Contáctanos!</h2>
+        <p class="contacto-description">Nos encantaría saber más sobre tus necesidades. No dudes en contactarnos.</p>
+
+        <div class="contacto-info">
+            <div class="contacto-item github">
+                <h3>GitHub</h3>
+                <a href="https://github.com/theluisp" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <div class="contacto-item facebook">
+                <h3>Facebook</h3>
+                <a href="https://www.facebook.com/profile.php?id=61569422122664&locale=es_LA" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+            <div class="contacto-item whatsapp">
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/522219220465" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            <div class="contacto-item mail">
+                <h3>Correo</h3>
+                <a href="mailto:sigma.sw.contacor@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+        </div>
+
+        <div class="contacto-form">
+            <h3>Envíanos un mensaje</h3>
+            <form method="POST" id="contact-form">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        emailjs.init({
+            publicKey: "In3JbADMh7xrJrVnv",
+        });
+    })();
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        emailjs.sendForm('service_0k03gcm', 'template_4erdlyk', this)
+            .then(function (response) {
+                Swal.fire({
+                    title: '¡Éxito!',
+                    text: 'El correo ha sido enviado correctamente, nos pondremos en contacto contigo lo más pronto posible.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+                document.querySelector('input[name="nombre"]').value = '';
+                document.querySelector('input[name="email"]').value = '';
+                document.querySelector('textarea[name="mensaje"]').value = '';
+
+                document.querySelector('button[type="submit"]').disabled = true;
+            }, function (error) {
+                Swal.fire({
+                    title: 'ERROR',
+                    text: 'Lo sentimos ocurrió un error al enviar el mensaje de correo electrónico.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            });
+    });
+</script>

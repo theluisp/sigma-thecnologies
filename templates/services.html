@@ -1,0 +1,50 @@
+
+<style>
+  
+    #servicesContainer {
+    background-image: url("{{ url_for('static', filename='img/tec.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Se ajusta al contenido si es mayor a la altura de la pantalla */
+
+    overflow: visible; /* Permite que el contenido se desborde si es necesario */
+    position: relative;
+}
+
+</style>
+<section class="contacto-section" id= "servicesContainer">
+    <div class="services-container">
+        <h2 class="services-title" style="color:white">Nuestros Servicios</h2>
+        <div class="service">
+            <!-- Servicio 1: Desarrollo de Software -->
+            <div class="service-card">
+                <h3>Desarrollo de Software</h3>
+                <p>Desarrollamos soluciones a medida para tu empresa o negocio, desde pequeñas aplicaciones web hasta sistemas completos, optimizando tus procesos y mejorando la eficiencia operativa.</p>
+            </div>
+
+            <!-- Servicio 2: Desarrollo de APIs -->
+            <div class="service-card">
+                <h3>Desarrollo de APIs</h3>
+                <p>Creamos APIs robustas y escalables que permiten la integración de diferentes sistemas, facilitando la comunicación entre plataformas y optimizando el flujo de datos.</p>
+            </div>
+
+            <!-- Servicio 3: Automatización -->
+            <div class="service-card">
+                <h3>Automatización</h3>
+                <p>Implementamos soluciones de automatización para optimizar tareas repetitivas, aumentando la productividad y reduciendo el riesgo de errores humanos en tus procesos de negocio.</p>
+            </div>
+
+            <!-- Servicio 4: Sitios Web -->
+            <div class="service-card">
+                <h3>Sitios Web</h3>
+                <p>Diseñamos sitios web modernos, funcionales y adaptativos, que se ajustan a las necesidades de tu negocio y ofrecen una excelente experiencia de usuario en todas las plataformas.</p>
+            </div>
+
+            <!-- Servicio 5: Transformación Digital -->
+            <div class="service-card">
+                <h3>Transformación Digital</h3>
+                <p>Ayudamos a tu empresa a adaptarse a las nuevas tecnologías mediante la digitalización de procesos y la integración de herramientas innovadoras para mejorar la competitividad.</p>
+            </div>
+        </div>
+    </div>
+</section>
